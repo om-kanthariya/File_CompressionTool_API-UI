@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Huffman File Compressor</h2>
+
+  <!-- File Upload -->
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="uploadFile()" [disabled]="!selectedFile">Compress</button>
+
+  <p *ngIf="compressionResult">
+    Original Size: {{compressionResult.originalSize}}<br />
+    Compressed Size: {{compressionResult.compressedSize}}<br />
+    Compression Ratio: {{ compressionResult.compressionRatio?.toFixed(2) }}
+
+  </p>
+
+  <!-- Download Compressed File -->
+  <button (click)="downloadCompressedFile()">Download Compressed File</button>
+
+  <!-- Optional Decompression -->
+  <!-- <button (click)="decompress()">Decompress</button> -->
+</div>

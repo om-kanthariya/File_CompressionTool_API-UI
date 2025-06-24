@@ -1,0 +1,8 @@
+
+<div class="container mt-5">
+  <h2 class="text-center">📦 File Compression Tool</h2>
+  <div class="card p-4 shadow-sm">
+    <input type="file" (change)="onFileSelected($event)" class="form-control mb-3">
+    <button class="btn btn-primary w-100" (click)="compressFile()" [disabled]="!selectedFile">Compress File</button>
+  </div>
+</div>
