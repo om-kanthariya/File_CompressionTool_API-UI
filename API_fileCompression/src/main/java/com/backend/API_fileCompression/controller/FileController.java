@@ -27,7 +27,7 @@ public class FileController {
     @Autowired
     private HuffmanService huffmanService;
 
-    @PostMapping("/compress")
+    @PostMapping("/compress-new")
     public ResponseEntity<byte[]> compressFile(@RequestParam("file") MultipartFile file) throws IOException {
         byte[] compressedData;
 
@@ -48,7 +48,7 @@ public class FileController {
 
 
 
-    @PostMapping("/compress-new")
+    @PostMapping("/compress")
     public ResponseEntity<?> compressFileNew(@RequestParam("file") MultipartFile file) {
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputStream(), StandardCharsets.UTF_8));
